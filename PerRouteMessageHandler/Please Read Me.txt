@@ -1,0 +1,5 @@
+﻿there are two types of per route dispatcher one in which the message handler replaces the HttpControllerDispatcher--that is not good
+other types is with accompaning HttpControllerDispatcher, in this there are few modifications that is needed in the WebApiConfig.cs class
+the second approach should be taken
+the only docs to follow is : https://docs.microsoft.com/en-us/aspnet/web-api/overview/advanced/http-message-handlers
+it has all the things

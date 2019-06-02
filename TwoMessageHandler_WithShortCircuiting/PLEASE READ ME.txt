@@ -1,0 +1,11 @@
+﻿:::::::::::::::TwoMessageHandler_WithShortCircuiting:::::::::::::::
+--------------------------------------------------------------------------------------------------------------------
+First Combination MessageHandler1 and MessageHandler2:
+In this combination MessageHandler2 is shortCiruited with the TaskCompletionSource<HttpResponseMessage>().
+This is not recommended because MessageHandler1 has async await but in MessageHandler2 we cannot use async await
+---------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+First Combination MessageHandler1 and MessageHandlerX:
+In this combination MessageHandlerX is shortCiruited with the return request.CreateResponse(System.Net.HttpStatusCode.BadRequest).
+This is recommended because MessageHandler1 has async await as well as  in MessageHandlerX we can use async await
+---------------------------------------------------------------------------------------------------------------------
